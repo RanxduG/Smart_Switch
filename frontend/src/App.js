@@ -8,7 +8,8 @@ const RoomButton = ({ device, state, onClick }) => {
     </button>
   );
 };
-const API_URL = process.env.REACT_APP_API_URL || "http://0.0.0.0:80";
+const API_URL = process.env.REACT_APP_API_URL;
+console.log(API_URL);
 
 function App() {
   const [lightState, setLightState] = useState("off");
@@ -32,9 +33,9 @@ function App() {
   const handleToggle = async (device) => {
     const newState = device === "light" ? (lightState === "on" ? "0" : "1") : (fanState === "on" ? "0" : "1");
     const body = { room: "room2", device: device === "light" ? "light1" : "fan", state: newState };
-
+    const Post_URL = API_URL + 'control';
     try {
-      const response = await fetch('http://0.0.0.0:80/control', {
+      const response = await fetch(Post_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
