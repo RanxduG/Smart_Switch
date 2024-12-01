@@ -88,8 +88,8 @@ app.post('/control', (req, res) => {
 });
 
 // Start Express server
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-    console.log(`Press Ctrl+C to quit.`);
-});
+const port = 80;
+app.listen(port, '0.0.0.0', () => {
+    console.log('Server is running on http://0.0.0.0:80');
+  });
+  
