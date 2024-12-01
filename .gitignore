@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# React build files
+build/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Certifications (be cautious with this)
+Certifications/
+sst/

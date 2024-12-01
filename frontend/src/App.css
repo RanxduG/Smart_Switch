@@ -1,0 +1,50 @@
+.App {
+    text-align: center;
+  }
+  
+  .rooms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .room {
+    width: 150px;
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .room.unavailable {
+    background-color: #f0f0f0;
+    color: gray;
+  }
+  
+  .room.active {
+    background-color: #dff0d8;
+    color: #3c763d;
+  }
+  
+  .device-button {
+    margin: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .device-button.on {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .device-button.off {
+    background-color: #d9534f;
+    color: white;
+  }
+  
