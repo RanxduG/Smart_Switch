@@ -1,50 +1,97 @@
 .App {
-    text-align: center;
-  }
-  
-  .rooms {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-  }
-  
-  .room {
-    width: 150px;
-    height: 150px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .room.unavailable {
-    background-color: #f0f0f0;
-    color: gray;
-  }
-  
-  .room.active {
-    background-color: #dff0d8;
-    color: #3c763d;
-  }
-  
-  .device-button {
-    margin: 8px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .device-button.on {
-    background-color: #5cb85c;
-    color: white;
-  }
-  
-  .device-button.off {
-    background-color: #d9534f;
-    color: white;
-  }
-  
+  text-align: center;
+}
+
+.rooms {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  grid-template-rows: auto; /* Adjust rows dynamically */
+  gap: 8px; /* Space between rooms */
+  justify-items: stretch;
+}
+
+.room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+.room.unavailable {
+  background-color: #f0f0f0;
+  color: gray;
+}
+
+.room.active {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+/* Define the custom sizes and positions */
+.room1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  height: 200px;
+}
+
+.tv-room {
+  grid-column: 2;
+  grid-row: 1;
+  height: 100px;
+}
+
+.living-room {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  height: 200px;
+}
+
+.room2 {
+  grid-column: 1;
+  grid-row: 3;
+  height: 100px;
+}
+
+.dining-room {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  height: 200px;
+}
+
+.room3 {
+  grid-column: 1;
+  grid-row: 4;
+  height: 100px;
+}
+
+.kitchen {
+  grid-column: 2;
+  grid-row: 4;
+  height: 100px;
+}
+
+.room4 {
+  grid-column: 3;
+  grid-row: 3 / span 2;
+  height: 200px;
+}
+
+.device-button {
+  margin: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.device-button.on {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.device-button.off {
+  background-color: #d9534f;
+  color: white;
+}
