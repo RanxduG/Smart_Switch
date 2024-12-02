@@ -116,6 +116,6 @@ app.post('/control', (req, res) => {
 
 // Start Express server
 const port = 3000;
-app.listen(port, '127.0.0.1', () => {
-    console.log('Server is running on http://127.0.0.1:3000');
+app.listen(port, '0.0.0.0', () => {
+    console.log('Server is running on http://13.233.251.126:3000/');
 });

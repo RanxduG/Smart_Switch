@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const API_URL = "http://13.233.251.126/"; // Replace with your backend URL
+const API_URL = "http://13.233.251.126:3000/"; // Replace with your backend URL
 
 const RoomButton = ({ device, state, onClick }) => {
   return (
