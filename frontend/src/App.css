@@ -1,97 +1,122 @@
+/* General App Styling */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
+/* Rooms Grid */
 .rooms {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
-  grid-template-rows: auto; /* Adjust rows dynamically */
-  gap: 8px; /* Space between rooms */
-  justify-items: stretch;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 16px; /* Space between rooms */
+  margin-top: 20px;
 }
 
+/* Room Container */
 .room {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  border: 1px solid gray;
+  padding: 16px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.room:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.room h2 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Device Buttons */
+.device-button {
+  margin: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.room.unavailable {
-  background-color: #f0f0f0;
-  color: gray;
+.device-button.on {
+  background-color: #28a745; /* Green for ON */
+  color: white;
 }
 
-.room.active {
-  background-color: #dff0d8;
-  color: #3c763d;
+.device-button.off {
+  background-color: #dc3545; /* Red for OFF */
+  color: white;
 }
 
-/* Define the custom sizes and positions */
+.device-button:hover {
+  transform: scale(1.05);
+}
+
+.device-button:active {
+  transform: scale(0.95);
+}
+
+/* Room Sizes and Custom Layout */
 .room1 {
   grid-column: 1;
-  grid-row: 1 / span 2;
-  height: 200px;
+  grid-row: span 2;
 }
 
-.tv-room {
+.tvRoom {
   grid-column: 2;
   grid-row: 1;
-  height: 100px;
 }
 
-.living-room {
+.livingRoom {
   grid-column: 3;
-  grid-row: 1 / span 2;
-  height: 200px;
+  grid-row: span 2;
 }
 
 .room2 {
   grid-column: 1;
   grid-row: 3;
-  height: 100px;
 }
 
-.dining-room {
+.diningRoom {
   grid-column: 2;
-  grid-row: 2 / span 2;
-  height: 200px;
+  grid-row: span 2;
 }
 
 .room3 {
   grid-column: 1;
   grid-row: 4;
-  height: 100px;
 }
 
 .kitchen {
   grid-column: 2;
   grid-row: 4;
-  height: 100px;
 }
 
 .room4 {
   grid-column: 3;
-  grid-row: 3 / span 2;
-  height: 200px;
+  grid-row: span 2;
 }
 
-.device-button {
-  margin: 8px;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+/* Active and Unavailable Rooms */
+.room.unavailable {
+  background-color: #f5f5f5;
+  color: gray;
+  border: 2px dashed #ccc;
 }
 
-.device-button.on {
-  background-color: #5cb85c;
-  color: white;
-}
-
-.device-button.off {
-  background-color: #d9534f;
-  color: white;
+.room.active {
+  background-color: #dff0d8;
+  border-color: #3c763d;
 }
